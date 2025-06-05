@@ -67,19 +67,28 @@ F. Register the agent with GitLab: Go inside the root directory of your "eks" pr
 
 ![image](https://github.com/user-attachments/assets/af8e10f0-3259-4db9-b800-6526462834d2)
 
-helm repo add gitlab https://charts.gitlab.io
+Install helm:
 
-helm repo update
+_curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3_
 
-helm upgrade --install eks gitlab/gitlab-agent \
+_chmod 700 get_helm.sh_
 
-    --namespace gitlab-agent-eks \
+_./get_helm.sh_
+
+_helm repo add gitlab https://charts.gitlab.io_
+
+_helm repo update_
+
+_helm upgrade --install eks gitlab/gitlab-agent \_
+
+    _--namespace gitlab-agent-eks \_
     
-    --create-namespace \
+    _--create-namespace \_
     
-    --set config.token=glagent-9zYw2RJK6qWdJRri5c3rFRGGD3sB-xwDPNMjydWNdx8eT8DVAA \
+    _--set config.token=glagent-9zYw2RJK6qWdJRri5c3rFRGGD3sB-xwDPNMjydWNdx8eT8DVAA \_
     
-    --set config.kasAddress=wss://kas.gitlab.com
+    _--set config.kasAddress=wss://kas.gitlab.com_
+    
 
     
 
