@@ -41,17 +41,31 @@ _curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zi
 unzip awscliv2.zip
 sudo ./aws/install_
 
-**Step 3:** Now, browse to https://gitlab.com/ and create a "New project".
+**Step 3:** Connect the created AWS EKS cluster with GitLab: https://docs.gitlab.com/user/clusters/agent/
 
-**Step 4:** Connect the created AWS EKS cluster with GitLab: https://docs.gitlab.com/user/clusters/agent/
-
-A. Install the Kubernetes Agent for GitLab: 
-
-Please ensure you are able to access the AWS EKS cluster: 
+A. Install the Kubernetes Agent for GitLab. Please ensure you are able to access the AWS EKS cluster: 
 
 aws eks update-kubeconfig --region <aws-region> --name <cluster-name>
 
 _kubectl get nodes_
+
+B. Now, sign-up or use your email to login to https://gitlab.com
+
+C. Create a project named "eks" on: https://gitlab.com
+
+D. In the repository, in the default branch, create an agent configuration file at the root:
+
+.gitlab/agents/awsekscluster/config.yaml
+
+E. Leave the config.yaml file blank.
+
+F. Register the agent with GitLab: Go inside the root directory of your "eks" project and click on the options as shown below:
+
+![image](https://github.com/user-attachments/assets/3fd0da3c-714d-481f-92df-8d07a5188ad8)
+
+
+
+
 
 
 
