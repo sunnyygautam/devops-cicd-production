@@ -27,13 +27,33 @@ F. _terraform apply --auto-approve_
 
 G. Check your AWS account from UI and confirm the creation of the new EKS cluster
 
-H. Install kubectl: curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+H. Install kubectl: 
+
+_curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"_
+
+_sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl_
+
+J. Install awscli:
+
+_sudo apt install unzip -y_
+
+_curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install_
 
 **Step 3:** Now, browse to https://gitlab.com/ and create a "New project".
 
 **Step 4:** Connect the created AWS EKS cluster with GitLab: https://docs.gitlab.com/user/clusters/agent/
 
-A. Install the Kubernetes Agent for GitLab: Please ensure you are able to access the AWS EKS cluster: kubectl get nodes
+A. Install the Kubernetes Agent for GitLab: 
+
+Please ensure you are able to access the AWS EKS cluster: 
+
+aws eks update-kubeconfig --region <aws-region> --name <cluster-name>
+
+_kubectl get nodes_
+
+
 
 
 
