@@ -179,11 +179,11 @@ ARGOCD_SERVER = <ArgoCD Server's Load Balancer DNS name>
 
 ARGOCD_USERNAME = admin
 
-AWS_ACCESS_KEY_ID = <generated earlier for the IAM user to authenticate to the GitLab Server>
+AWS_ACCESS_KEY_ID = generated earlier for the IAM user to authenticate to the GitLab Server
 
 AWS_DEFAULT_REGION = us-east-1
 
-AWS_SECRET_ACCESS_KEY = <generated earlier for the IAM user to authenticate to the GitLab Server>
+AWS_SECRET_ACCESS_KEY = generated earlier for the IAM user to authenticate to the GitLab Server
 
 CLUSTER_NAME = demo-eks
 
@@ -195,7 +195,7 @@ ECR_REPOSITORY = devopscicd
 
 KUBERNETES_NAMESPACE = dev
 
-SNYK_TOKEN = <generated earlier to authenticate the GitLab server to Snyk server>
+SNYK_TOKEN = generated earlier to authenticate the GitLab server to Snyk server
 
 ![image](https://github.com/user-attachments/assets/6dea84e5-7562-473e-9db2-5e4cbb81dbd6)
 
