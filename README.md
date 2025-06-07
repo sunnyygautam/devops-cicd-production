@@ -119,6 +119,82 @@ application source code will be kept
 
 This will be utilized to store our built container images
 
+**Step-7:** Generate SNYK_TOKEN to utilize open-source Snyk container scanning tool to scan our images for security vulnerabilities
+
+Browse to: https://app.snyk.io/login?redirectUri=L2FjY291bnQ_X2dsPTEqMWF2NXhvbipfZ2EqTXprM056QTBNamcxTGpFM05Ea3lPREEyTWprLipfZ2FfWDlTSDNLUDdCNCpjekUzTkRreU9EQTJNamtrYnpFa1p6RWtkREUzTkRreU9EQTJNekVrYWpVNEpHd3dKR2d3&from=snyk_auth_link
+
+Or on your browser, type: "snyk token" and follow the steps to generate a snyk authentication token. This will be used to autheticate our GitLab server to Snyk server to scan our container images
+
+![image](https://github.com/user-attachments/assets/4ffa5c87-4c4e-44b9-bcc1-e53142304bac)
+
+Save the token.
+
+**Step-8:** Now, on your Bastion Host, follow the following steps to clone the application respository:
+
+mkdir -p cicdnew
+
+cd cicdnew
+
+git clone https://gitlab.com/bhavukm/cicdnew.git
+
+cd cicdnew
+
+ssh-keygen
+
+![image](https://github.com/user-attachments/assets/1e943bd1-684e-42ea-b798-1b8c207cbbaf)
+
+This ssh keypair is generated to authenticate your bastion host to the gitlab server.
+
+cat ~/.ssh/id_ed25519.pub
+
+Now, copy the ssh public key and go to your Gitlab server. I am using https://gitlab.com (create a new account using your gmail credentials)
+
+click on edit profile:
+
+![image](https://github.com/user-attachments/assets/84e089a1-420f-43c5-a5e9-3d683131bded)
+
+Then, go to: SSH keys >> Add new key >> paste the ssh-public-key >> remove expiration date and Add Key:
+
+![image](https://github.com/user-attachments/assets/3ce1c310-fe5e-4f3e-8da5-30cc9704f05d)
+
+Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew-2.git
+
+![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
+
+**step-9:** Since, we have a GitLab based CI/CD pipeleine that is automated, we will add all relevant environement variables to our GitLab project:
+
+Go to project settings >> CI/CD
+
+![image](https://github.com/user-attachments/assets/3cf0e0b9-f316-499d-9f4b-fc4bbb7adea3)
+
+Click on variables, choose owner and save changes. This will allow our pipeline to have all the access it needs to use the variables in our pipeline stages
+
+![image](https://github.com/user-attachments/assets/c3a2b8de-efaa-4dc6-90aa-1f711e3db824)
+
+Now, add the all the following variables, one by one:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
