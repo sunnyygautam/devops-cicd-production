@@ -155,6 +155,7 @@ Save the token.
 **Step-8:** Now, follow the following steps to clone the application respository:
 
 Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew.git
+(https://gitlab.com/bhavukm/cicdnew.git)
 
 ![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
 
@@ -162,7 +163,7 @@ mkdir -p cicdnew-2
 
 cd cicdnew-2
 
-git clone https://gitlab.com/bhavukm/cicdnew-2.git
+git clone https://gitlab.com/bhavukm/cicdnew.git
 
 cd cicdnew-2
 
