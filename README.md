@@ -56,9 +56,9 @@ _sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl_
 
 J. Install awscli:
 
-_sudo apt install unzip -y_
+sudo apt install unzip -y
 
-_curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
 unzip awscliv2.zip
 
