@@ -143,6 +143,14 @@ git clone https://gitlab.com/bhavukm/cicdnew-2.git
 
 cd cicdnew-2
 
+cd argo-app
+
+kubectl apply -f argo-app.yaml
+
+Check on ArgoCD UI to see the created application:
+
+![image](https://github.com/user-attachments/assets/cec3b4b5-bcbd-4c70-8cf3-64ace3972ea1)
+
 ssh-keygen
 
 ![image](https://github.com/user-attachments/assets/1e943bd1-684e-42ea-b798-1b8c207cbbaf)
@@ -199,10 +207,39 @@ SNYK_TOKEN = generated earlier to authenticate the GitLab server to Snyk server
 
 ![image](https://github.com/user-attachments/assets/6dea84e5-7562-473e-9db2-5e4cbb81dbd6)
 
+cd ..
 
+**step-10:** Test the DevOps CI/CD Automated Pipeline Deployment
 
+git config --global --edit
 
+![image](https://github.com/user-attachments/assets/39a9ee22-13d5-4da4-89dd-25ea448528b6)
 
+save and quit
+
+vim Dockerfile
+
+Add a test line like this:
+
+![image](https://github.com/user-attachments/assets/ba7fb284-7699-407b-bd6c-18d26a2388bd)
+
+save and quit
+
+git add Dockerfile
+
+git commit -m "Test"
+
+git push origin main
+
+Note: If its asks for username and password, then follow the following steps:
+
+git remote remove origin
+
+git remote add origin git@gitlab.com:bhavukm/cicdnew-2.git
+
+git push origin main
+
+Check on https://gitlab.com if the pipeline ran successfully
 
 
 
