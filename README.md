@@ -85,7 +85,7 @@ check the status on gitlab.com:
 
 ![image](https://github.com/user-attachments/assets/de111244-0b71-49cc-92fe-ba4f70ac315b)
 
-Step-4: Now, install argocd on the bastion host.
+**Step-4:** Now, install, configure and access argocd on the bastion host.
 
 _kubectl create namespace argocd_
 
@@ -98,6 +98,17 @@ _kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}
 Now, navigate to your AWS UI, and verify the creation of the Load Balancer for ArgoCD:
 
 ![image](https://github.com/user-attachments/assets/10ba06d5-6f12-46a0-99a4-34786d605212)
+
+The LB DNS Name will be the AgoCD Server URL with default user set as admin
+
+Retrieve the ArgoCD Server password: _kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d_
+
+Now, go to your browser, and enter the crecdentials to access ArgoCD UI:
+
+![image](https://github.com/user-attachments/assets/dfb572e7-35d4-4441-b572-513e03295049)
+
+
+
 
 
 
