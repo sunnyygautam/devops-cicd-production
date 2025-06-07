@@ -107,6 +107,19 @@ Now, go to your browser, and enter the crecdentials to access ArgoCD UI:
 
 ![image](https://github.com/user-attachments/assets/dfb572e7-35d4-4441-b572-513e03295049)
 
+**Step-5:** Create an IAM user and assign Administrator access to it. Then, generate AWS Access keys and save it somewhere safely. These access keys will be used to authenticate to the GitLab server, where our 
+
+application source code will be kept
+
+![image](https://github.com/user-attachments/assets/6160dc97-0d32-405a-bb95-362a9a327ef4)
+
+**Step-6:** Create an AWS ECR repository. In your AWS account, navigate to AWS ECR service and create a repo:
+
+![image](https://github.com/user-attachments/assets/db0ba734-932a-4019-bbf9-c2294e87045f)
+
+This will be utilized to store our built container images
+
+
 
 
 
