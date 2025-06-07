@@ -8,7 +8,7 @@
 
 1. We are going to use **GitLab** as our **SCM (Source Code Management)** and **CI (Continuous Integration)** Platform.
 
-2. We will be using **ArgoCD** as our **CD (Continuous Delivery)** Platform.
+2. We will be using **ArgoCD** as our **CD (Continuous Deployment)** Platform.
 
 3. We will deploy a **Frontend application** as Pods inside an **AWS EKS Cluster**.
 
