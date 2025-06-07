@@ -241,6 +241,13 @@ git push origin main
 
 Check on https://gitlab.com if the pipeline ran successfully
 
+![image](https://github.com/user-attachments/assets/eaf3950b-4d8c-409d-b335-e42e5c5dc766)
+
+On the ArgoCD UI, the application should be updated:
+
+![image](https://github.com/user-attachments/assets/5b1bcf63-9847-4bb3-8901-40e4768d82ea)
+
+
 
 
 
