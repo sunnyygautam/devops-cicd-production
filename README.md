@@ -85,9 +85,20 @@ check the status on gitlab.com:
 
 ![image](https://github.com/user-attachments/assets/de111244-0b71-49cc-92fe-ba4f70ac315b)
 
-    
+Step-4: Now, install argocd on the bastion host.
 
-    
+_kubectl create namespace argocd_
+
+_kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.5/manifests/install.yaml_
+
+_kubectl get all -n argocd_
+
+_kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'_     #To expose the argocd server deployed inside the EKS cluster via a Load Balancer
+
+Now, navigate to your AWS UI, and verify the creation of the Load Balancer for ArgoCD:
+
+![image](https://github.com/user-attachments/assets/10ba06d5-6f12-46a0-99a4-34786d605212)
+
 
 
 
