@@ -115,7 +115,7 @@ application source code will be kept
 
 **Step-6:** Create an AWS ECR repository. In your AWS account, navigate to AWS ECR service and create a repo:
 
-![image](https://github.com/user-attachments/assets/db0ba734-932a-4019-bbf9-c2294e87045f)
+![image](https://github.com/user-attachments/assets/883a3cbd-9cfd-4ce9-8885-a70c2765903e)
 
 This will be utilized to store our built container images
 
