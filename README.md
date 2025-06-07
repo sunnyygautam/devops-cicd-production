@@ -1,7 +1,23 @@
 # devops-cicd-production
-A production DevOps CICD Pipeline
+A production DevOps CICD Pipeline - Hands-On Project
 
-**Problem Statement:** How to deploy a DevOps CICD production pipeline?
+**Problem Statement:** How to deploy a DevOps CICD Production pipeline?
+
+**Technology/Tools Stack that we will be using:**
+
+1. We are going to use **GitLab** as our **SCM (Source Code Management)** and **CI (Continuous Integration)** Platform.
+
+2. We will be using **ArgoCD** as our **CD (Continuous Delivery)** Platform.
+
+3. We will deploy a **Frontend application** as Pods inside an **AWS EKS Cluster**.
+
+4. The EKS Cluster will be deployed via **Terraform IaC**.
+   
+5. We will be utilizing **Snyk Tool** to scan our container images for security vulnerabilities.
+
+6. The container images will reside on an **AWS ECR** private registry.
+
+7. The **Devops CI/CD Deployment Pipeline** will be fully-automated.
 
 **Step-By-Step Solution:**
 
