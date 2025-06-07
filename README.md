@@ -19,6 +19,10 @@ A production DevOps CICD Pipeline - Hands-On Project
 
 7. The **Devops CI/CD Deployment Pipeline** will be fully-automated.
 
+**Application Architectural Diagram:**
+
+![image](https://github.com/user-attachments/assets/8722ed58-a65c-4aee-b61c-ae2508f5a5a5)
+
 **Step-By-Step Solution:**
 
 **Step 1:** To administer the entire DevOps CICD pipeline, provision an AWS EC2 Instance (t2.micro) with Ubuntu 24.04 LTS AMI (or any VM on any cloud platform - it does not matter). This instance will function as a Bastion Host (Jump Server) to deploy resources. Please ensure that you attach an IAM role to the instance with following policies:
