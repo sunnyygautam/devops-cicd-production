@@ -129,15 +129,19 @@ Or on your browser, type: "snyk token" and follow the steps to generate a snyk a
 
 Save the token.
 
-**Step-8:** Now, on your Bastion Host, follow the following steps to clone the application respository:
+**Step-8:** Now, follow the following steps to clone the application respository:
 
-mkdir -p cicdnew
+Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew-2.git
 
-cd cicdnew
+![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
 
-git clone https://gitlab.com/bhavukm/cicdnew.git
+mkdir -p cicdnew-2
 
-cd cicdnew
+cd cicdnew-2
+
+git clone https://gitlab.com/bhavukm/cicdnew-2.git
+
+cd cicdnew-2
 
 ssh-keygen
 
@@ -156,10 +160,6 @@ click on edit profile:
 Then, go to: SSH keys >> Add new key >> paste the ssh-public-key >> remove expiration date and Add Key:
 
 ![image](https://github.com/user-attachments/assets/3ce1c310-fe5e-4f3e-8da5-30cc9704f05d)
-
-Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew-2.git
-
-![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
 
 **step-9:** Since, we have a GitLab based CI/CD pipeleine that is automated, we will add all relevant environement variables to our GitLab project:
 
@@ -198,6 +198,10 @@ KUBERNETES_NAMESPACE = dev
 SNYK_TOKEN = generated earlier to authenticate the GitLab server to Snyk server
 
 ![image](https://github.com/user-attachments/assets/6dea84e5-7562-473e-9db2-5e4cbb81dbd6)
+
+
+
+
 
 
 
