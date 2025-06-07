@@ -59,7 +59,9 @@ J. Install awscli:
 _sudo apt install unzip -y_
 
 _curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
 unzip awscliv2.zip
+
 sudo ./aws/install_
 
 **Step 3:** Connect the created AWS EKS cluster with GitLab: https://docs.gitlab.com/user/clusters/agent/
