@@ -2,7 +2,7 @@
 
 **A Fully-Automated Production-Grade DevOps CI/CD Pipeline - Hands-On Project**
 
-**Problem Statement:** How to deploy a DevOps CICD Production pipeline?
+**Problem Statement:** How to deploy a Fully-Automated Production-Grade DevOps CI/CD Pipeline?
 
 **Technology/Tools Stack that we will be using:**
 
