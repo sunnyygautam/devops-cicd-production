@@ -56,13 +56,13 @@ _sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl_
 
 J. Install awscli:
 
-sudo apt install unzip -y
+_sudo apt install unzip -y_
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+_curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"_
 
-unzip awscliv2.zip
+_unzip awscliv2.zip_
 
-sudo ./aws/install
+_sudo ./aws/install_
 
 **Step 3:** Connect the created AWS EKS cluster with GitLab: https://docs.gitlab.com/user/clusters/agent/
 
@@ -159,29 +159,29 @@ Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew.git
 
 ![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
 
-mkdir -p cicdnew-2
+_mkdir -p cicdnew_
 
-cd cicdnew-2
+_cd cicdnew_
 
-git clone https://gitlab.com/bhavukm/cicdnew.git
+_git clone https://gitlab.com/bhavukm/cicdnew.git_
 
-cd cicdnew-2
+_cd cicdnew_
 
-cd argo-app
+_cd argo-app_
 
-kubectl apply -f argo-app.yaml
+_kubectl apply -f argo-app.yaml_
 
 Check on ArgoCD UI to see the created application:
 
 ![image](https://github.com/user-attachments/assets/cec3b4b5-bcbd-4c70-8cf3-64ace3972ea1)
 
-ssh-keygen
+_ssh-keygen_
 
 ![image](https://github.com/user-attachments/assets/1e943bd1-684e-42ea-b798-1b8c207cbbaf)
 
 This ssh keypair is generated to authenticate your bastion host to the gitlab server.
 
-cat ~/.ssh/id_ed25519.pub
+_cat ~/.ssh/id_ed25519.pub_
 
 Now, copy the ssh public key and go to your Gitlab server. I am using https://gitlab.com (create a new account using your gmail credentials)
 
@@ -231,7 +231,7 @@ SNYK_TOKEN = generated earlier to authenticate the GitLab server to Snyk server
 
 ![image](https://github.com/user-attachments/assets/6dea84e5-7562-473e-9db2-5e4cbb81dbd6)
 
-cd ..
+_cd .._
 
 **step-10:** Test the DevOps CI/CD Automated Pipeline Deployment
 
@@ -249,19 +249,19 @@ Add a test line like this:
 
 save and quit
 
-git add Dockerfile
+_git add Dockerfile_
 
-git commit -m "Test"
+_git commit -m "Test"_
 
-git push origin main
+_git push origin main_
 
-Note: If its asks for username and password, then follow the following steps:
+Note: If it is asking for the username and password, then follow the following steps:
 
-git remote remove origin
+_git remote remove origin_
 
-git remote add origin git@gitlab.com:bhavukm/cicdnew-2.git
+_git remote add origin git@gitlab.com:bhavukm/cicdnew.git_
 
-git push origin main
+_git push origin main_
 
 Check on https://gitlab.com if the pipeline ran successfully
 
