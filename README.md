@@ -155,7 +155,8 @@ Save the token.
 **Step-8:** Now, follow the following steps to clone the application respository:
 
 Fork the gitlab repository: git@gitlab.com:bhavukm/cicdnew.git
-(https://gitlab.com/bhavukm/cicdnew.git)
+(https-based: https://gitlab.com/bhavukm/cicdnew.git)
+(SSh-Based: git@gitlab.com:bhavukm/cicdnew.git)
 
 ![image](https://github.com/user-attachments/assets/c05198ec-e266-4fb0-9168-33229bdbb197)
 
@@ -175,7 +176,7 @@ Check on ArgoCD UI to see the created application:
 
 ![image](https://github.com/user-attachments/assets/cec3b4b5-bcbd-4c70-8cf3-64ace3972ea1)
 
-_ssh-keygen_
+_ssh-keygen_ (# For SSH-Based authentication to GitLab)
 
 ![image](https://github.com/user-attachments/assets/1e943bd1-684e-42ea-b798-1b8c207cbbaf)
 
