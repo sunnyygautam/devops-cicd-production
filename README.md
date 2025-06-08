@@ -260,7 +260,7 @@ Note: If it is asking for the username and password, then follow the following s
 
 _git remote remove origin_
 
-_git remote add origin git@gitlab.com:bhavukm/cicdnew.git_
+_git remote add origin git@gitlab.com:bhavukm/cicdnew.git_ (#Please change it to your own Gitlab SSH-based URL)
 
 _git push origin main_
 
