@@ -68,7 +68,7 @@ _sudo ./aws/install_
 
 A. Install the Kubernetes Agent for GitLab. Please ensure you are able to access the AWS EKS cluster: 
 
-aws eks update-kubeconfig --region <aws-region> --name <cluster-name>
+aws eks update-kubeconfig --region us-east-1 --name demo-eks
 
 _kubectl get nodes_
 
