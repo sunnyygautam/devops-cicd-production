@@ -128,7 +128,7 @@ _kubectl get all -n argocd_
 
 _kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'_     #To expose the argocd server deployed inside the EKS cluster via a Load Balancer
 
-_kubectl describe svc argocd-server -n argocd
+_kubectl describe svc argocd-server -n argocd_
 
 Now, navigate to your AWS UI, and verify the creation of the Load Balancer for ArgoCD:
 
@@ -187,6 +187,21 @@ _kubectl apply -f argo-app.yaml_
 Check on ArgoCD UI to see the created application:
 
 ![image](https://github.com/user-attachments/assets/cec3b4b5-bcbd-4c70-8cf3-64ace3972ea1)
+
+Follow the some more important steps:
+
+_kubectl create secret docker-registry regcred \
+  --docker-server=305480796574.dkr.ecr.us-east-1.amazonaws.com \
+  --docker-username=AWS \
+  --docker-password="$(aws ecr get-login-password --region us-east-1)" \
+  -n devopscicd_
+
+_sudo apt  install docker.io_
+_aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 305480796574.dkr.ecr.us-east-1.amazonaws.com_
+_sudo usermod -aG docker $USER_
+_newgrp docker_
+_docker build -t devopscicd ._
+_docker tag devopscicd:latest 305480796574.dkr.ecr.us-east-1.amazonaws.com/devopscicd:latest_
 
 _ssh-keygen_ (# For SSH-Based authentication to GitLab)
 
