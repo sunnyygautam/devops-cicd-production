@@ -197,10 +197,15 @@ _kubectl create secret docker-registry regcred \
   -n devopscicd_
 
 _sudo apt  install docker.io_
+
 _aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 305480796574.dkr.ecr.us-east-1.amazonaws.com_
+
 _sudo usermod -aG docker $USER_
+
 _newgrp docker_
+
 _docker build -t devopscicd ._
+
 _docker tag devopscicd:latest 305480796574.dkr.ecr.us-east-1.amazonaws.com/devopscicd:latest_
 
 _ssh-keygen_ (# For SSH-Based authentication to GitLab)
