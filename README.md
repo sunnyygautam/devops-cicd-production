@@ -128,6 +128,8 @@ _kubectl get all -n argocd_
 
 _kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'_     #To expose the argocd server deployed inside the EKS cluster via a Load Balancer
 
+_kubectl describe svc argocd-server -n argocd
+
 Now, navigate to your AWS UI, and verify the creation of the Load Balancer for ArgoCD:
 
 ![image](https://github.com/user-attachments/assets/10ba06d5-6f12-46a0-99a4-34786d605212)
