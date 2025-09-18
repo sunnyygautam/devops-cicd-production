@@ -104,6 +104,16 @@ _helm repo update_
 
 _helm upgrade --install eks gitlab/gitlab-agent --namespace gitlab-agent-eks --create-namespace --set config.token=glagent-9zYw2RJK6qWdJRri5c3rFRGGD3sB-xwDPNMjydWNdx8eT8DVAA --set config.kasAddress=wss://kas.gitlab.com_
 
+------------------------------
+helm repo add gitlab https://charts.gitlab.io
+helm repo update
+helm upgrade --install eks gitlab/gitlab-agent \
+    --namespace gitlab-agent-eks \
+    --create-namespace \
+    --set config.token=glagent-xza4EDgk_9BUiiZyoivE \
+    --set config.kasAddress=wss://kas.gitlab.com
+------------------------------
+
 check the status on gitlab.com:
 
 ![image](https://github.com/user-attachments/assets/de111244-0b71-49cc-92fe-ba4f70ac315b)
