@@ -1,4 +1,4 @@
-# devops-cicd-production
+# devops-cicd-production with EKS, GitLab and ArgoCD
 
 **A Fully-Automated Production-Grade DevOps CI/CD Pipeline - Hands-On Project**
 
